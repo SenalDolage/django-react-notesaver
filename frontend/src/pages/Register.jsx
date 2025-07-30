@@ -1,7 +1,9 @@
+import GenericForm from "../components/GenericForm";
+
 function Register() {
   return (
-    <div>
-      <h1>Register for NoteSaver</h1>
+    <div className="container">
+      <GenericForm route="/api/user/register/" method="register" />
     </div>
   );
 }

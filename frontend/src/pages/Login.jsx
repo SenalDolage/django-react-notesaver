@@ -1,8 +1,9 @@
+import GenericForm from "../components/GenericForm";
+
 function Login() {
   return (
-    <div>
-      <h1>Login to NoteSaver</h1>
-      <p>Please enter your credentials.</p>
+    <div className="container">
+      <GenericForm route="/api/token/" method="login" />
     </div>
   );
 }

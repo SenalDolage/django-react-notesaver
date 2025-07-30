@@ -1,7 +1,7 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import { jwtdecode } from "jwt-decode";
-import api from "./api";
+import { jwtDecode } from "jwt-decode";
+import api from "../api";
 import { REFRESH_TOKEN, ACCESS_TOKEN } from "../constants";
 
 // This component is used to protect routes that require authentication
@@ -53,7 +53,7 @@ function ProtectedRoutes({ children }) {
     }
 
     try {
-      const decoded = jwtdecode(accessToken);
+      const decoded = jwtDecode(accessToken);
       const currentTime = Date.now() / 1000;
 
       if (decoded.exp < currentTime) {
